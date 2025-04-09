@@ -19,7 +19,7 @@ body, html {
     align-items: center;
 }
 canvas {
-    width: 4000px; /* Set canvas width manually */
+    width: 1440x; /* Set canvas width manually usually set 4000  (max width) */
     margin: 0 auto; /* Center the canvas horizontally */
     display: block; /* Ensure proper centering */
 }
@@ -59,13 +59,13 @@ canvas {
 
     // Initialize Rive
     riveInstance = new rive.Rive({
-        src: 'website.riv', // Ensure this file name is correct
+        src: 'web_index_nav.riv', // Ensure this file name is correct
         canvas: document.getElementById('riveCanvas'),
         autoplay: true,
-        artboard: 'Artboard', // Ensure this artboard name is correct
-        stateMachines: 'State Machine 1', // Ensure this state machine name is correct
+        artboard: 'Responsive Index', // Ensure this artboard name is correct
+        stateMachines: 'State Machine', // Ensure this state machine name is correct
         onLoad: () => {
-            const inputs = riveInstance.stateMachineInputs('State Machine 1'); // Ensure this state machine name is correct
+            const inputs = riveInstance.stateMachineInputs('State Machine'); // Ensure this state machine name is correct
             widthNumInput = inputs.find(i => i.name === 'width num'); // Ensure this input name is correct
             riveInstance.resizeDrawingSurfaceToCanvas();
 
