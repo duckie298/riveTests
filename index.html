@@ -19,7 +19,7 @@ body, html {
     align-items: center;
 }
 canvas {
-    width: 1440x; /* Set canvas width manually usually set 4000  (max width) */
+    width: 4000x; /* Set canvas width manually usually set 4000  (max width) */
     margin: 0 auto; /* Center the canvas horizontally */
     display: block; /* Ensure proper centering */
 }
@@ -45,10 +45,12 @@ canvas {
         }
 
         // Update canvas height based on breakpoint
-        if (browserWidth >= 923) {
-            canvas.style.height = '1756px'; // wide height
-        } else {
-            canvas.style.height = '2549px'; // skinny height
+        if (browserWidth >= 728) {
+            canvas.style.height = '1205px'; // wide height
+        }
+        
+        else {
+            canvas.style.height = '1491px'; // skinny height
         }
 
         // Ensure Rive redraws on canvas resize
